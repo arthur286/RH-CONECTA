@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RH Dúvidas - Fale Conosco</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <h1>RH <span>DÚVIDAS</span></h1>
+            </div>
+            <div class="contact-info">
+                <a href="mailto:contato@rhduvidas.com.br" class="email-link">
+                    <i class="icon">✉</i> Fale conosco por e-mail
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="main-content">
+            <div class="left-column">
+                <h2>RH DUVIDAS - FALE CONOSCO</h2>
+                
+                <div class="frequent-topics">
+                    <h3>ASSUNTOS FREQUENTES</h3>
+                    <ul>
+                        <li data-topic="ferias">FÉRIAS</li>
+                        <li data-topic="salario">SALÁRIO</li>
+                        <li data-topic="beneficios">BENEFÍCIOS</li>
+                        <li data-topic="documentos">DOCUMENTOS</li>
+                    </ul>
+                </div>
+
+                <div class="topic-content" id="topicContent">
+                    <p>Selecione um assunto acima para obter informações</p>
+                </div>
+
+                <div class="contact-form">
+                    <h3>Não encontrou o que precisa?</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nome:</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail:</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Assunto:</label>
+                            <select id="subject" required>
+                                <option value="">Selecione um assunto</option>
+                                <option value="ferias">Férias</option>
+                                <option value="salario">Salário</option>
+                                <option value="beneficios">Benefícios</option>
+                                <option value="outros">Outros</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensagem:</label>
+                            <textarea id="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="right-column">
+                <div class="info-box">
+                    <h3>Informações</h3>
+                    <div class="progress-container">
+                        <div class="progress-info">
+                            <span>Páginas</span>
+                            <span>1/1</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress" id="progressBar"></div>
+                        </div>
+                        <div class="progress-percentage">41%</div>
+                    </div>
+                    <div class="date-info">
+                        <p>Por Isabely</p>
+                        <p>06/08/2025</p>
+                    </div>
+                    <div class="preview-note">
+                        <p>Site muito bom, tirou todas as minhas duvidas sobre férias</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 RH Dúvidas - Todos os direitos reservados</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
