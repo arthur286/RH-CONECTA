@@ -3,101 +3,187 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RH Dúvidas - Fale Conosco</title>
+    <title>RH CONECTA - Férias</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <div class="header-content">
             <div class="logo">
-                <h1>RH <span>DÚVIDAS</span></h1>
+                <h1>RH <span>CONECTA</span></h1>
             </div>
+            <nav class="main-nav">
+                <a href="#ferias" class="nav-link active">Férias</a>
+                <a href="#quem-somos" class="nav-link">Quem Somos</a>
+                <a href="#missao-visao-valores" class="nav-link">Missão, Visão e Valores</a>
+            </nav>
             <div class="contact-info">
                 <a href="mailto:contato@rhduvidas.com.br" class="email-link">
-                    <i class="icon">✉</i> Fale conosco por e-mail
+                    <i class="icon">✉</i> Fale conosco
                 </a>
             </div>
         </div>
     </header>
 
     <div class="container">
-        <div class="main-content">
-            <div class="left-column">
-                <h2>RH DUVIDAS - FALE CONOSCO</h2>
+        <!-- SEÇÃO FÉRIAS -->
+        <section id="ferias" class="content-section active">
+            <div class="main-content">
+                <div class="left-column">
+                    <h2>RH DÚVIDAS - FÉRIAS</h2>
+                    
+                    <div class="topic-content">
+                        <h4>Férias</h4>
+                        <p>As férias são um direito de todo trabalhador regido pela CLT. Abaixo seguem Dúvidas Frequentes:</p>
+                        
+                        <details>
+                            <summary>Qual é o período aquisitivo?</summary>
+                            <p>12 meses de trabalho.</p>
+                        </details>
+
+                        <details>
+                            <summary>Qual é o período concessivo?</summary>
+                            <p>Até 12 meses após o período aquisitivo.</p>
+                        </details>
+
+                        <details>
+                            <summary>Qual a duração das férias?</summary>
+                            <p>30 dias corridos para quem não teve mais de 5 faltas injustificadas.</p>
+                        </details>
+
+                        <details>
+                            <summary>Quando o pagamento das férias deve ser feito?</summary>
+                            <p>O pagamento deve ser realizado até 2 dias antes do início das férias.</p>
+                        </details>
+
+                        <details>
+                            <summary>Com quanta antecedência devo agendar as férias?</summary>
+                            <p>É necessário dar pelo menos 30 dias de antecedência para agendar as férias.</p>
+                        </details>
+
+                        <p>Para solicitar suas férias, entre em contato com o RH pelo e-mail: <a href="mailto:ferias@empresa.com">ferias@empresa.com</a></p>
+                    </div>
+
+                    <div class="contact-form">
+                        <h3>Não encontrou o que precisa?</h3>
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Nome:</label>
+                                <input type="text" id="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">E-mail:</label>
+                                <input type="email" id="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Assunto:</label>
+                                <select id="subject" required>
+                                    <option value="">Selecione um assunto</option>
+                                    <option value="ferias">Férias</option>
+                                    <option value="ferias_agendamento">Agendamento de Férias</option>
+                                    <option value="ferias_pagamento">Pagamento de Férias</option>
+                                    <option value="outros">Outros</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Mensagem:</label>
+                                <textarea id="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit">Enviar Mensagem</button>
+                        </form>
+                    </div>
+                </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO QUEM SOMOS -->
+        <section id="quem-somos" class="content-section">
+            <div class="section-header">
+                <h2>QUEM SOMOS</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Nossa História</h3>
+                    <p>O RH Conecta nasceu da necessidade de oferecer um canal de comunicação direto e transparente entre colaboradores e o departamento de Recursos Humanos. Com mais de 10 anos de experiência no mercado, nos dedicamos a esclarecer todas as dúvidas trabalhistas de forma clara e acessível.</p>
+                    
+                    <h3>Nossa Equipe</h3>
+                    <p>Contamos com uma equipe especializada de profissionais de RH, advogados trabalhistas e especialistas em relações humanas, todos comprometidos em oferecer o melhor atendimento e suporte aos colaboradores.</p>
+                    
+                    <h3>Nossa Proposta</h3>
+                    <p>Ser a ponte que conecta os colaboradores às informações que precisam, promovendo um ambiente de trabalho mais transparente e harmonioso.</p>
+                </div>
                 
-                <div class="frequent-topics">
-                    <h3>ASSUNTOS FREQUENTES</h3>
-                    <ul>
-                        <li data-topic="ferias">FÉRIAS</li>
-                        <li data-topic="salario">SALÁRIO</li>
-                        <li data-topic="beneficios">BENEFÍCIOS</li>
-                        <li data-topic="documentos">DOCUMENTOS</li>
+                <div class="team-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">+10</div>
+                        <div class="stat-label">Anos de Experiência</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">+5.000</div>
+                        <div class="stat-label">Dúvidas Resolvidas</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">+100</div>
+                        <div class="stat-label">Empresas Atendidas</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">98%</div>
+                        <div class="stat-label">Satisfação dos Usuários</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO MISSÃO, VISÃO E VALORES -->
+        <section id="missao-visao-valores" class="content-section">
+            <div class="section-header">
+                <h2>MISSÃO, VISÃO E VALORES</h2>
+            </div>
+            <div class="mvv-content">
+                <div class="mvv-item">
+                    <div class="mvv-icon">🎯</div>
+                    <h3>Missão</h3>
+                    <p>Oferecer suporte especializado em questões trabalhistas, promovendo a transparência e fortalecendo a relação entre colaboradores e empresas através de informações claras e acessíveis.</p>
+                </div>
+                
+                <div class="mvv-item">
+                    <div class="mvv-icon">👁️</div>
+                    <h3>Visão</h3>
+                    <p>Ser referência nacional em soluções de RH, reconhecida pela excelência no atendimento e pela capacidade de transformar a comunicação corporativa através da tecnologia e humanização.</p>
+                </div>
+                
+                <div class="mvv-item">
+                    <div class="mvv-icon">💎</div>
+                    <h3>Valores</h3>
+                    <ul class="values-list">
+                        <li>
+                            <strong>Transparência:</strong> Agimos com honestidade e clareza em todas as nossas comunicações
+                        </li>
+                        <li>
+                            <strong>Empatia:</strong> Colocamo-nos no lugar do colaborador para entender suas necessidades
+                        </li>
+                        <li>
+                            <strong>Excelência:</strong> Buscamos a melhor qualidade em todos os nossos serviços
+                        </li>
+                        <li>
+                            <strong>Inovação:</strong> Estamos sempre em busca de novas soluções e melhorias
+                        </li>
+                        <li>
+                            <strong>Comprometimento:</strong> Dedicamo-nos integralmente à satisfação dos nossos usuários
+                        </li>
                     </ul>
                 </div>
-
-                <div class="topic-content" id="topicContent">
-                    <p>Selecione um assunto acima para obter informações</p>
-                </div>
-
-                <div class="contact-form">
-                    <h3>Não encontrou o que precisa?</h3>
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Nome:</label>
-                            <input type="text" id="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">E-mail:</label>
-                            <input type="email" id="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="subject">Assunto:</label>
-                            <select id="subject" required>
-                                <option value="">Selecione um assunto</option>
-                                <option value="ferias">Férias</option>
-                                <option value="salario">Salário</option>
-                                <option value="beneficios">Benefícios</option>
-                                <option value="outros">Outros</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Mensagem:</label>
-                            <textarea id="message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit">Enviar Mensagem</button>
-                    </form>
-                </div>
             </div>
-
-            <div class="right-column">
-                <div class="info-box">
-                    <h3>Informações</h3>
-                    <div class="progress-container">
-                        <div class="progress-info">
-                            <span>Páginas</span>
-                            <span>1/1</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress" id="progressBar"></div>
-                        </div>
-                        <div class="progress-percentage">41%</div>
-                    </div>
-                    <div class="date-info">
-                        <p>Por Isabely</p>
-                        <p>06/08/2025</p>
-                    </div>
-                    <div class="preview-note">
-                        <p>Site muito bom, tirou todas as minhas duvidas sobre férias</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+        </section>
     </div>
 
     <footer>
-        <p>© 2025 RH Dúvidas - Todos os direitos reservados</p>
+        <p>© 2025 RH Conecta - Todos os direitos reservados</p>
     </footer>
 
     <script src="script.js"></script>
 </body>
-</html> 
+</html>
