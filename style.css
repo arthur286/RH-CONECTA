@@ -18,10 +18,13 @@ body {
 }
 
 header {
-    background-color: #adacac;
-    color: rgb(235, 235, 235);
+    background-color: #1a4f8a;
+    color: white;
     padding: 15px 0;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .header-content {
@@ -39,7 +42,27 @@ header {
 }
 
 .logo span {
-    color: #000000;
+    color: #ffcc00;
+}
+
+.main-nav {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
 }
 
 .contact-info a {
@@ -61,6 +84,22 @@ header {
     margin-right: 5px;
 }
 
+/* Seções de Conteúdo */
+.content-section {
+    display: none;
+    animation: fadeIn 0.5s ease-in;
+}
+
+.content-section.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Estilos da Seção Férias (mantidos do código anterior) */
 .main-content {
     display: flex;
     margin-top: 30px;
@@ -82,44 +121,11 @@ header {
     border-bottom: 2px solid #f0f0f0;
 }
 
-.frequent-topics {
-    margin-bottom: 30px;
-}
-
-.frequent-topics h3 {
-    color: #1a4f8a;
-    margin-bottom: 15px;
-}
-
-.frequent-topics ul {
-    list-style: none;
-}
-
-.frequent-topics li {
-    padding: 12px 15px;
-    margin-bottom: 8px;
-    background-color: #f8f9fa;
-    border-left: 4px solid #1a4f8a;
-    cursor: pointer;
-    transition: all 0.3s;
-}
-
-.frequent-topics li:hover {
-    background-color: #e9ecef;
-    transform: translateX(5px);
-}
-
-.frequent-topics li.active {
-    background-color: #e3f2fd;
-    font-weight: bold;
-}
-
 .topic-content {
     background-color: #f8f9fa;
     padding: 20px;
     border-radius: 6px;
     margin-bottom: 30px;
-    min-height: 100px;
 }
 
 .topic-content h4 {
@@ -127,13 +133,64 @@ header {
     margin-bottom: 15px;
 }
 
-.topic-content ul {
-    margin-left: 20px;
+details {
     margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: all 0.3s ease;
 }
 
-.topic-content li {
-    margin-bottom: 8px;
+summary {
+    padding: 12px 15px;
+    background-color: #f8f9fa;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s;
+    position: relative;
+}
+
+summary:hover {
+    background-color: #e9ecef;
+}
+
+summary::after {
+    content: '+';
+    position: absolute;
+    right: 15px;
+    font-weight: bold;
+    transition: transform 0.3s;
+}
+
+details[open] summary::after {
+    content: '-';
+}
+
+details[open] {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+details p {
+    padding: 15px;
+    background-color: white;
+    margin: 0;
+    border-top: 1px solid #eee;
+}
+
+.topic-content a {
+    color: #1a4f8a;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.topic-content a:hover {
+    text-decoration: underline;
+}
+
+.contact-form {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #f0f0f0;
 }
 
 .contact-form h3 {
@@ -159,6 +216,7 @@ header {
     border: 1px solid #ddd;
     border-radius: 4px;
     font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 .form-group input:focus,
@@ -178,11 +236,12 @@ button {
     cursor: pointer;
     font-size: 16px;
     font-weight: 600;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 button:hover {
     background-color: #153c6b;
+    transform: translateY(-2px);
 }
 
 .right-column {
@@ -250,6 +309,126 @@ button:hover {
     border-left: 4px solid #ffcc00;
 }
 
+/* Estilos da Seção Quem Somos */
+.section-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-header h2 {
+    color: #1a4f8a;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.about-content {
+    background: white;
+    border-radius: 8px;
+    padding: 40px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    margin-bottom: 30px;
+}
+
+.about-text h3 {
+    color: #1a4f8a;
+    margin: 25px 0 15px 0;
+    font-size: 1.5rem;
+}
+
+.about-text p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.team-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 2px solid #f0f0f0;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.stat-item:hover {
+    transform: translateY(-5px);
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #1a4f8a;
+    margin-bottom: 10px;
+}
+
+.stat-label {
+    font-size: 1rem;
+    color: #666;
+    font-weight: 500;
+}
+
+/* Estilos da Seção Missão, Visão e Valores */
+.mvv-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.mvv-item {
+    background: white;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.mvv-item:hover {
+    transform: translateY(-5px);
+}
+
+.mvv-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.mvv-item h3 {
+    color: #1a4f8a;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.mvv-item p {
+    line-height: 1.8;
+    color: #555;
+}
+
+.values-list {
+    list-style: none;
+    text-align: left;
+}
+
+.values-list li {
+    margin-bottom: 15px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 6px;
+    border-left: 4px solid #1a4f8a;
+}
+
+.values-list strong {
+    color: #1a4f8a;
+}
+
 footer {
     background-color: #1a4f8a;
     color: white;
@@ -271,5 +450,24 @@ footer {
     .header-content {
         flex-direction: column;
         gap: 15px;
+    }
+    
+    .main-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    .team-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .mvv-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .about-content,
+    .mvv-item {
+        padding: 20px;
     }
 }
