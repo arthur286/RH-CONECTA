@@ -13,7 +13,8 @@
                 <h1>RH <span>CONECTA</span></h1>
             </div>
             <nav class="main-nav">
-                <a href="#ferias" class="nav-link active">Dúvidas</a>
+                <a href="#ferias" class="nav-link active">Férias</a>
+                <a href="#admissao" class="nav-link">Admissão</a>
                 <a href="#quem-somos" class="nav-link">Quem Somos</a>
                 <a href="#missao-visao-valores" class="nav-link">Missão, Visão e Valores</a>
             </nav>
@@ -30,7 +31,7 @@
         <section id="ferias" class="content-section active">
             <div class="main-content">
                 <div class="left-column">
-                    <h2>RH CONECTA </h2>
+                    <h2>RH CONECTA - Férias</h2>
                     
                     <div class="topic-content">
                         <h4>Férias</h4>
@@ -60,26 +61,73 @@
                             <summary>Com quanta antecedência devo agendar as férias?</summary>
                             <p>É necessário dar pelo menos 30 dias de antecedência para agendar as férias.</p>
                         </details>
+
                         <details>
-                            <summary>É possivel vender parte das férias?</summary>
-                            <p>Sim. O trabalhadr pode "vender" até 1/3 das férias.</p>
+                            <summary>É possível vender parte das férias?</summary>
+                            <p>Sim. O trabalhador pode "vender" até 1/3 das férias.</p>
                         </details>
+
                         <details>
                             <summary>O que acontece se a empresa não conceder férias no prazo?</summary>
                             <p>A empresa deve pagar em dobro valor das férias, conforme o art.137 da CLT.</p>
                         </details>
 
                         <p>Para solicitar suas férias, entre em contato com o RH pelo e-mail: <a href="mailto:ferias@empresa.com">ferias@empresa.com</a></p>
+                    </div>
 
-                    <br>
+                    <!-- FORMULÁRIO ESPECÍFICO PARA FÉRIAS -->
+                    <div class="contact-form">
+                        <h3>Dúvidas sobre Férias?</h3>
+                        <form id="feriasForm">
+                            <div class="form-group">
+                                <label for="feriasName">Nome:</label>
+                                <input type="text" id="feriasName" name="feriasName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="feriasEmail">E-mail:</label>
+                                <input type="email" id="feriasEmail" name="feriasEmail" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="feriasSubject">Assunto específico:</label>
+                                <select id="feriasSubject" name="feriasSubject" required>
+                                    <option value="">Selecione um assunto</option>
+                                    <option value="agendamento_ferias">Agendamento de Férias</option>
+                                    <option value="pagamento_ferias">Pagamento de Férias</option>
+                                    <option value="venda_ferias">Venda de Férias</option>
+                                    <option value="periodo_aquisitivo">Período Aquisitivo</option>
+                                    <option value="direitos_ferias">Direitos nas Férias</option>
+                                    <option value="outros_ferias">Outras dúvidas sobre Férias</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="feriasPeriodo">Período desejado para férias:</label>
+                                <input type="text" id="feriasPeriodo" name="feriasPeriodo" placeholder="Ex: 01/01/2025 a 31/01/2025">
+                            </div>
+                            <div class="form-group">
+                                <label for="feriasMessage">Mensagem:</label>
+                                <textarea id="feriasMessage" name="feriasMessage" rows="5" required placeholder="Descreva sua dúvida ou solicitação sobre férias..."></textarea>
+                            </div>
+                            <button type="submit">Enviar Solicitação</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <!-- SEÇÃO ADMISSÃO -->
+        <section id="admissao" class="content-section">
+            <div class="main-content">
+                <div class="left-column">
+                    <h2>RH CONECTA - Admissão</h2>
+                    
+                    <div class="topic-content">
                         <h4>Admissão</h4>
                         <p>Dúvidas frequentes sobre Admissão</p>
 
                         <details>
                             <summary>Quais documentos o empregador pode exigir na admissão?</summary>
                             <p>RG, CPF, carteira de trabalho digital, comprovante de residência, título de eleitor, certidão de nascimento/casamento, comprovante de escolaridade e foto 3x4.
-👉 O empregador não pode exigir exame de gravidez, certidão negativa de antecedentes criminais (salvo em funções específicas) ou documentos que não tenham relação com o emprego.</p>
+                            👉 O empregador não pode exigir exame de gravidez, certidão negativa de antecedentes criminais (salvo em funções específicas) ou documentos que não tenham relação com o emprego.</p>
                         </details>
 
                         <details>
@@ -99,48 +147,50 @@
 
                         <details>
                             <summary>Período de experiência: quanto tempo pode durar?</summary>
-                            <p>O contrato de experiência pode ter até 90 dias, podendo ser feito em uma ou duas etapas (ex: 45 + 45 dias).
-</p>
+                            <p>O contrato de experiência pode ter até 90 dias, podendo ser feito em uma ou duas etapas (ex: 45 + 45 dias).</p>
                         </details>
                     </div>
 
+                    <!-- FORMULÁRIO ESPECÍFICO PARA ADMISSÃO -->
                     <div class="contact-form">
-                        <h3>Não encontrou o que precisa?</h3>
-                        <form id="contactForm">
+                        <h3>Dúvidas sobre Admissão?</h3>
+                        <form id="admissaoForm">
                             <div class="form-group">
-                                <label for="name">Nome:</label>
-                                <input type="text" id="name" required>
+                                <label for="admissaoName">Nome:</label>
+                                <input type="text" id="admissaoName" name="admissaoName" required>
                             </div>
                             <div class="form-group">
-                                <label for="email">E-mail:</label>
-                                <input type="email" id="email" required>
+                                <label for="admissaoEmail">E-mail:</label>
+                                <input type="email" id="admissaoEmail" name="admissaoEmail" required>
                             </div>
                             <div class="form-group">
-                                <label for="subject">Assunto:</label>
-                                <select id="subject" required>
+                                <label for="admissaoSubject">Assunto específico:</label>
+                                <select id="admissaoSubject" name="admissaoSubject" required>
                                     <option value="">Selecione um assunto</option>
-                                    <option value="ferias">Férias</option>
-                                    <option value="ferias_agendamento">Agendamento de Férias</option>
-                                    <option value="ferias_pagamento">Pagamento de Férias</option>
-                                    <option value="admissao">Admissão</option>
-                                    <option value="documentos">Documentos</option>
-                                    <option value="experiencia">Experiência</option>
-                                    <option value="outros">Outros</option>
+                                    <option value="documentacao">Documentação Necessária</option>
+                                    <option value="exame_admissional">Exame Admissional</option>
+                                    <option value="registro_ctps">Registro na CTPS</option>
+                                    <option value="periodo_experiencia">Período de Experiência</option>
+                                    <option value="beneficios">Benefícios</option>
+                                    <option value="horario_trabalho">Horário de Trabalho</option>
+                                    <option value="outros_admissao">Outras dúvidas sobre Admissão</option>
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label for="message">Mensagem:</label>
-                                <textarea id="message" rows="5" required></textarea>
+                                <label for="admissaoCargo">Cargo de interesse:</label>
+                                <input type="text" id="admissaoCargo" name="admissaoCargo" placeholder="Ex: Analista, Assistente, etc.">
                             </div>
-                            <button type="submit">Enviar Mensagem</button>
+                            <div class="form-group">
+                                <label for="admissaoMessage">Mensagem:</label>
+                                <textarea id="admissaoMessage" name="admissaoMessage" rows="5" required placeholder="Descreva sua dúvida ou situação sobre admissão..."></textarea>
+                            </div>
+                            <button type="submit">Enviar Dúvida</button>
                         </form>
-                    </div>
-                </div>
-                    </div>
                     </div>
                 </div>
             </div>
         </section>
+
         <!-- SEÇÃO QUEM SOMOS -->
         <section id="quem-somos" class="content-section">
             <div class="section-header">
@@ -153,7 +203,6 @@
                     
                     <h3>Nossa Proposta</h3>
                     <p>Mais do que um trabalho acadêmico, somos um canal de cuidado, aprendizado e conexão humana.</p>
-                </div>
                 </div>
             </div>
         </section>
